@@ -31,55 +31,72 @@
         transition: 0.5s;
         height: 25px;
       }
+
+      .container {
+        display: block;
+        text-align: center;
+        border: solid black 2.5px;
+        border-radius: 15px;
+        width: 500px;
+        height: 400px;
+      }
     </style>
   </head>
   <body>
-    <h1>Contact Form</h1>
-    <form action="/submit-form" method="POST">
-      <label for="superHeroName">super hero name:</label>
-      <input
-        type="text"
-        id="superHeroName"
-        name="superHeroName"
-        required
-      /><br /><br />
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required /><br /><br />
-      <label for="message">Message:</label><br />
-      <textarea
-        id="message"
-        name="message"
-        rows="4"
-        cols="50"
-        required
-      ></textarea
-      ><br /><br />
-      <input type="submit" value="Submit" />
-    </form>
-    <h1>User Management</h1>
-    <form id="updateForm">
-      <label for="currentName">Current name:</label>
-      <input type="text" id="currentName" required /><br /><br />
-      <label for="currentEmail">Current email:</label>
-      <input type="email" id="currentEmail" required /><br /><br />
-      <label for="newName">New name:</label>
-      <input type="text" id="newName" required /><br /><br />
-      <label for="newEmail">New email:</label>
-      <input type="email" id="newEmail" required /><br /><br />
-      <button type="submit">Update User</button>
-    </form>
-    <h1>Show Users</h1>
-    <table id="usersTable">
-      <thead>
-        <tr>
-          <th>User Name</th>
-          <th>User Email</th>
-        </tr>
-      </thead>
-      <tbody id="userTableBody">
-        <!-- data of users will be rendered here -->
-      </tbody>
-    </table>
+    <div class="container">
+      <h1>Contact Form</h1>
+      <form action="/submit-form" method="POST">
+        <label for="superHeroName">super hero name:</label>
+        <input
+          type="text"
+          id="superHeroName"
+          name="superHeroName"
+          required
+        /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+        <label for="message">Message:</label><br />
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          cols="50"
+          required
+        ></textarea
+        ><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <div class="container">
+      <h1>User Management</h1>
+      <form id="updateForm">
+        <label for="currentName">Current name:</label>
+        <input type="text" id="currentName" required /><br /><br />
+        <label for="currentEmail">Current email:</label>
+        <input type="email" id="currentEmail" required /><br /><br />
+        <label for="newName">New name:</label>
+        <input type="text" id="newName" required /><br /><br />
+        <label for="newEmail">New email:</label>
+        <input type="email" id="newEmail" required /><br /><br />
+        <button type="submit">Update User</button>
+      </form>
+    </div>
+
+    <div class="container">
+      <h1>Show Users</h1>
+      <table id="usersTable">
+        <thead>
+          <tr>
+            <th>User Name</th>
+            <th>User Email</th>
+          </tr>
+        </thead>
+        <tbody id="userTableBody">
+          <!-- data of users will be rendered here -->
+        </tbody>
+      </table>
+    </div>
     <script>
       document
         .getElementById("updateForm")
