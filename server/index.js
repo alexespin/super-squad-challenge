@@ -39,7 +39,7 @@ app.get('/users', async (req, res) => {
 });
 
 // Form route
-app.get('/form', (req, res) => {git 
+app.get('/form', (req, res) => {
     res.sendFile('pages/form.html', { root: serverPublic });
 });
 
